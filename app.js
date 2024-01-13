@@ -4,14 +4,14 @@ $(document).ready(function(){
     $('.btn-stat').click(function(){
         let max_nam = $('.inp-stat').val();
         let guess_list = document.querySelector(".guess-list");
-        if(max_nam < 10){
-            $('.text-erorr').show()
-        }else{
+        if(max_nam > 10){
             $('.step-1').hide()
             $('.step-2').show()
             target = Math.floor((Math.random() * max_nam) + 1)
             tedad_shance = Math.floor(Math.log2(max_nam))
             $('.tedad_shance').text(tedad_shance)
+        }else{
+            alert("یک عدد درست و کامل وارد کن")
         }
     })
     $('.guess-btn').click(function(){
